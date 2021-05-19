@@ -1,7 +1,14 @@
 <!--app.component.html-->
 <h1>pass data to parent to child</h1>
-<app-user-list [hero]="data"></app-user-list>
 
-<!--user-list.component.html.html-->
-<p>child component</p>
-<h1>{{hero}}</h1>
+<div *ngFor="let data of users">
+    <app-user [hero]="data"></app-user>
+</div>
+
+<!--user.component.html.html-->
+<div  class="box">
+    <p>{{hero.name}}</p>
+    <p>{{hero.age}}</p>
+    <p>{{hero.address}}</p>
+</div>
+
