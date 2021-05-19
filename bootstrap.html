@@ -1,0 +1,14 @@
+<h1>Add bootstrap in Angular 11</h1>
+<p>
+        <ngb-alert [dismissible]="false">
+          <strong>Warning!</strong> Better check yourself, you're not looking too good.
+        </ngb-alert>
+      </p>
+
+      <h1>Resets the Alert's</h1>
+      <p *ngFor="let alert of alerts">
+        <ngb-alert [type]="alert.type" (closed)="close(alert)">{{ alert.message }}</ngb-alert>
+      </p>
+      <p>
+        <button type="button" class="btn btn-primary" (click)="reset()">Reset</button>
+      </p>
